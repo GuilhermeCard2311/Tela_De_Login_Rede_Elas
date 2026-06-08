@@ -1,0 +1,746 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FF8BC7;
+}
+
+/* HEADER */
+
+.mural-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 40px;
+    flex-wrap: wrap;
+}
+
+.mural-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mural-header__logo-image {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #444;
+    background-color: #D9D9D9;
+}
+
+.mural-header__logo-title {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mural-header__nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mural-header__button {
+    border: none;
+    border-radius: 35px;
+
+    padding: 18px 40px;
+
+    background-color: #EDC1DD;
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.mural-header__button:hover {
+    background-color: #A85A83;
+    transform: translateY(-3px);
+}
+
+.mural-header__button--active {
+    transform: translateY(0);
+    background-color: #844566;
+}
+
+.mural-header__logout {
+    border: none;
+    background: transparent;
+
+    color: #FFDFFD;
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mural-header__logout:hover {
+    color: white;
+}
+
+/* CAMPO DE RELATO */
+
+.mural-post {
+    background-color: #FFDFFD;
+
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    margin-bottom: 25px;
+}
+
+.mural-post__input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #844566;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mural-post__button {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #A85A83;
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.mural-post__button:hover {
+    background-color: #844566;
+
+    transform: scale(1.08);
+
+    box-shadow: 0 4px 15px rgba(132, 69, 102, 0.4);
+}
+
+.mural-post__button:active {
+    transform: scale(0.95);
+
+    background-color: #6d3953;
+}
+
+.mural-post__icon {
+    color: #844566;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* SIDEBAR */
+
+.community-card {
+    background-color: #FFDFFD;
+
+    border-radius: 25px;
+
+    padding: 20px;
+}
+
+.community-card__title {
+    color: #844566;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.community-card__item {
+    background-color: #F3B9D8;
+
+    border-radius: 25px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+}
+
+.community-card__item h4 {
+    color: #844566;
+    font-weight: bold;
+    margin: 0;
+}
+
+.community-card__item span {
+    color: #844566;
+    font-size: 14px;
+}
+
+/* RELATOS */
+
+#relatos-container {
+    min-height: 500px;
+}
+
+/* ===========================
+   RELATOS
+=========================== */
+
+#relatos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    min-height: 500px;
+}
+
+/* CARD */
+
+.relato-card {
+    background-color: #FFDFFD;
+
+    border-radius: 35px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.relato-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* HEADER */
+
+.relato-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+/* TITULO */
+
+.relato-card__title {
+    color: #844566;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+/* AUTOR */
+
+.relato-card__author {
+    color: #A85A83;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* TEXTO */
+
+.relato-card__text {
+    color: #5e3448;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+/* BOTÃO DE DENÚNCIA */
+
+.relato-card__report {
+    border: none;
+    background: transparent;
+
+    color: #A85A83;
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.relato-card__report:hover {
+    color: #d62828;
+
+    transform: scale(1.1);
+}
+
+/* ===========================
+   AÇÕES / VOTOS
+=========================== */
+
+.relato-card__actions {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background-color: #F3C7DD;
+
+    width: fit-content;
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+}
+
+/* BOTÕES */
+
+.relato-card__vote {
+    border: none;
+    background: transparent;
+
+    color: #6f6f6f;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.relato-card__vote:hover {
+    transform: scale(1.15);
+}
+
+/* UPVOTE */
+
+.relato-card__vote:first-child:hover {
+    color: #2ecc71;
+}
+
+/* DOWNVOTE */
+
+.relato-card__vote:last-child:hover {
+    color: #e74c3c;
+}
+
+/* CONTADOR */
+
+.relato-card__votes {
+    color: #844566;
+
+    font-weight: bold;
+
+    font-size: 1.1rem;
+
+    min-width: 15px;
+
+    text-align: center;
+}
+
+/* ===========================
+   MODAL DENÚNCIA
+=========================== */
+
+.report-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+/* CONTEÚDO */
+
+.report-modal__content {
+    width: 100%;
+    max-width: 1050px;
+
+    background-color: #F2D7EE;
+
+    border-radius: 45px;
+
+    padding: 35px;
+}
+
+/* HEADER */
+
+.report-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.report-modal__title {
+    color: #A85A83;
+
+    font-size: 4rem;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+/* BOTÃO FECHAR */
+
+.report-modal__close {
+    border: none;
+    background: transparent;
+
+    color: #A85A83;
+
+    font-size: 3rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.report-modal__close:hover {
+    transform: scale(1.1);
+
+    color: #844566;
+}
+
+/* BODY */
+
+.report-modal__body {
+    margin-bottom: 25px;
+}
+
+/* TEXTAREA */
+
+.report-modal__textarea {
+    width: 100%;
+    height: 330px;
+
+    resize: none;
+
+    border: none;
+    outline: none;
+
+    border-radius: 40px;
+
+    background-color: #ECECEC;
+
+    padding: 30px;
+
+    color: #A85A83;
+
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.report-modal__textarea::placeholder {
+    color: #B57FA1;
+}
+
+/* FOOTER */
+
+.report-modal__footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* BOTÃO */
+
+.report-modal__button {
+    border: none;
+
+    background-color: #A85A83;
+    color: white;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    padding: 15px 60px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.report-modal__button:hover {
+    background-color: #844566;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(132, 69, 102, 0.35);
+}
+
+.report-modal__button:active {
+    transform: scale(0.96);
+}
+
+.report-modal {
+    display: none;
+}
+
+/* Responsividade */
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    .mural-header {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .mural-header__logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mural-header__nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mural-header__button {
+        font-size: 18px;
+        padding: 14px 24px;
+    }
+
+    .community-card {
+        margin-top: 25px;
+    }
+
+    /* Modal de denúncia */
+
+    .report-modal__content {
+        border-radius: 35px;
+        padding: 25px;
+    }
+
+    .report-modal__title {
+        font-size: 3rem;
+    }
+
+    .report-modal__textarea {
+        height: 260px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 768px) {
+
+    .mural-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .mural-header__logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mural-header__logo-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .mural-header__logo-title {
+        font-size: 1.8rem;
+    }
+
+    .mural-header__nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mural-header__button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .mural-header__logout {
+        display: none;
+    }
+
+    /* Campo de postagem */
+
+    .mural-post {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .mural-post__icon {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .mural-post__input {
+        font-size: 16px;
+        min-width: 0;
+    }
+
+    .mural-post__button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+
+        flex-shrink: 0;
+    }
+
+    .relato-card {
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .relato-card__title {
+        font-size: 1.4rem;
+    }
+
+    .relato-card__author {
+        font-size: 0.95rem;
+    }
+
+    .relato-card__text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .relato-card__report {
+        font-size: 1.3rem;
+    }
+
+    /* Comunidades */
+
+    .community-card {
+        margin-top: 20px;
+    }
+
+    .community-card__title {
+        text-align: center;
+    }
+
+    /* Modal de denúncia */
+
+    .report-modal {
+        padding: 15px;
+    }
+
+    .report-modal__content {
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .report-modal__header {
+        margin-bottom: 20px;
+    }
+
+    .report-modal__title {
+        font-size: 2.2rem;
+    }
+
+    .report-modal__close {
+        font-size: 2rem;
+    }
+
+    .report-modal__textarea {
+        height: 200px;
+
+        padding: 20px;
+
+        border-radius: 25px;
+
+        font-size: 1rem;
+    }
+
+    .report-modal__button {
+        width: 100%;
+
+        font-size: 1.2rem;
+
+        padding: 14px;
+    }
+
+}
+
+/* Celulares muito pequenos */
+
+@media (max-width: 480px) {
+
+    .mural-header__logo-title {
+        font-size: 1.5rem;
+    }
+
+    .mural-post {
+        border-radius: 25px;
+    }
+
+    .mural-post__input {
+        font-size: 14px;
+    }
+
+    .mural-post__button {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .community-card {
+        padding: 15px;
+    }
+
+    .community-card__item {
+        padding: 12px;
+    }
+
+    .relato-card {
+        padding: 16px;
+    }
+
+    .relato-card__header {
+        gap: 10px;
+    }
+
+    .relato-card__title {
+        font-size: 1.2rem;
+    }
+
+    .relato-card__text {
+        font-size: 0.9rem;
+    }
+}

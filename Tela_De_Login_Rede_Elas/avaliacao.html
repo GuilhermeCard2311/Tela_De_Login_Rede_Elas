@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo de Avaliação</title>
+  <link rel="stylesheet" href="assets/Css/home.css">
+  <link rel="stylesheet" href="avaliacao.css">
+</head>
+<body>
+    <div class="avaliacao-container">
+        <div class="filter-section">
+          <label class="filter-label" for="filterSelect">Ordenar por:</label>
+          <select class="filter-select" id="filterSelect">
+            <option value="recentes">Mais Recentes</option>
+            <option value="relevantes">Mais Relevantes</option>
+          </select>
+        </div>
+
+        <section class="feed" id="feedRelatos">
+        </section>
+    </div>
+
+    <script src="avaliacao.js"></script>
+</body>
+</html>

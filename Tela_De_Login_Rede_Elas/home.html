@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rede Elas - Main Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/home.css">
+
+    <link rel="stylesheet" href="avaliacao.css">
+
+    <script src="assets/js/home.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+
+        <!-- Header -->
+        <header class="mural-header">
+
+            <div class="mural-header__logo">
+
+                <div class="mural-header__logo-image"></div>
+
+                <h1 class="mural-header__logo-title">
+                    Rede Elas
+                </h1>
+
+            </div>
+
+            <nav class="mural-header__nav">
+
+                <button class="mural-header__button mural-header__button--active">
+                    Início
+                </button>
+
+                <button class="mural-header__button">
+                    Mural
+                </button>
+
+                <button class="mural-header__button">
+                    Ajuda & Denúncia
+                </button>
+
+                <button class="mural-header__button" id="Painel__adm" style="display: none;">
+                    Painel Adm
+                </button>
+
+            </nav>
+
+            <button class="mural-header__logout" id="Logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+
+        </header>
+
+        <!-- Conteúdo -->
+        <div class="row">
+
+            <!-- Área Principal -->
+            <div class="col-12 col-lg-9">
+
+                <div class="mural-post">
+
+                    <i class="fa-solid fa-pencil mural-post__icon"></i>
+
+                    <input type="text" class="mural-post__input" placeholder="Compartilhe o seu relato aqui...">
+
+                    <button class="mural-post__button">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </div>
+
+                <!-- Relatos renderizados pelo JS -->
+                <section id="relatos-container">
+                    <div class="avaliacao-container">
+                        <div class="filter-section">
+                            <label class="filter-label" for="filterSelect">Ordenar por:</label>
+                            <select class="filter-select" id="filterSelect">
+                                <option value="recentes">Mais Recentes</option>
+                                <option value="relevantes">Mais Relevantes</option>
+                            </select>
+                        </div>
+                        <section class="feed" id="feedRelatos"></section>
+                    </div>
+                    <div class="relato-card" data-id="1">
+
+                        <div class="relato-card__header">
+
+                            <div>
+                                <h2 class="relato-card__title">
+                                    Titulo Relato 1
+                                </h2>
+
+                                <h5 class="relato-card__author">
+                                    Anônimo
+                                </h5>
+                            </div>
+
+                            <button class="relato-card__report">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                            </button>
+
+                        </div>
+
+                        <p class="relato-card__text">
+                            Meu namorado apos uma discussão me pediu desculpas,
+                            e mudou após o ocorrido, não aceitem menos que isso!
+                        </p>
+
+                        <div class="relato-card__actions">
+
+                            <button class="relato-card__vote">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </button>
+
+                            <span class="relato-card__votes">
+                                0
+                            </span>
+
+                            <button class="relato-card__vote">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="relato-card" data-id="2">
+
+                        <div class="relato-card__header">
+
+                            <div>
+                                <h2 class="relato-card__title">
+                                    Titulo Relato 2
+                                </h2>
+
+                                <h5 class="relato-card__author">
+                                    Anônimo
+                                </h5>
+                            </div>
+
+                            <button class="relato-card__report">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                            </button>
+
+                        </div>
+
+                        <p class="relato-card__text">
+                            Ontem meu chefe me assediou no trabalho, ele me chamou para uma reunião e fez comentários
+                            inapropriados sobre minha aparência. Me senti muito desconfortável e não sei o que fazer.
+                        </p>
+
+                        <div class="relato-card__actions">
+
+                            <button class="relato-card__vote">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </button>
+
+                            <span class="relato-card__votes">
+                                0
+                            </span>
+
+                            <button class="relato-card__vote">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-12 col-lg-3">
+
+                <aside class="community-card">
+
+                    <h3 class="community-card__title">
+                        Comunidades
+                    </h3>
+
+                    <div class="community-card__item">
+                        <h4>Comunidade</h4>
+                        <span>Comunidade...</span>
+                    </div>
+
+                    <div class="community-card__item">
+                        <h4>Comunidade</h4>
+                        <span>Comunidade...</span>
+                    </div>
+
+                    <div class="community-card__item">
+                        <h4>Comunidade</h4>
+                        <span>Comunidade...</span>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL DENÚNCIA -->
+
+    <div class="report-modal" id="reportModal">
+
+        <div class="report-modal__content">
+
+            <!-- HEADER -->
+
+            <div class="report-modal__header">
+
+                <h2 class="report-modal__title">
+                    Denuncia:
+                </h2>
+
+                <button class="report-modal__close">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
+
+            </div>
+
+            <!-- BODY -->
+
+            <div class="report-modal__body">
+
+                <textarea class="report-modal__textarea" placeholder="Descreva o motivo da denuncia ..."></textarea>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <div class="report-modal__footer">
+
+                <button class="report-modal__button">
+                    Enviar Denuncia
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="avaliacao.js"></script>
+</body>
+
+</html>

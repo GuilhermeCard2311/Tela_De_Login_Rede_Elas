@@ -1,0 +1,32 @@
+{
+  "usuarios": [
+    {
+      "nome": "Bernardo Soares",
+      "cpf": "111.111.111-10",
+      "email": "bernardosoares701@gmail.com",
+      "senha": "Bernardo123",
+      "nivel": "admin",
+      "dataCriacao": "2026-05-15",
+      "id": "W0Ho0AM2ZRw"
+    },
+    {
+      "nome": "Andre",
+      "cpf": "808.290.220-58",
+      "email": "bbnado34@gmail.com",
+      "senha": "senha123",
+      "nivel": "usuario",
+      "dataCriacao": "2026-06-03",
+      "id": "bLvJrFOGQ_I"
+    },
+    {
+      "nome": "Guilherme",
+      "cpf": "222.222.222.21",
+      "email": "teste1234@gmail.com",
+      "senha": "senha123",
+      "nivel": "usuario",
+      "dataCriacao": "2026-06-08",
+      "id": "7xVLoe-TlJw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
