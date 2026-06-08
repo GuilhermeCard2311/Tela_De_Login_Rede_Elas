@@ -1,0 +1,115 @@
+body {
+  background-color: #FF8BC7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.avaliacao-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 12px;
+}
+
+.filter-label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
+
+.filter-select {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+.relato-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.relato-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.relato-author {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.relato-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.relato-actions {
+  display: flex;
+  align-items: center;
+}
+
+.vote-pill {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 8px 16px;
+  gap: 12px;
+}
+
+.vote-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.vote-btn svg {
+  width: 22px; 
+  height: 22px;
+  stroke: #666;
+  stroke-width: 3px;
+}
+
+.vote-btn:hover {
+  transform: scale(1.15);
+}
+
+.vote-btn.upvote-ativo svg {
+  stroke: rgb(255, 0, 170);
+}
+
+.vote-btn.downvote-ativo svg {
+  stroke: rgb(255, 0, 255);
+}
+
+.vote-count {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  min-width: 24px;
+  text-align: center;
+}
